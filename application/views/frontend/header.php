@@ -15,7 +15,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <!--    <link rel="stylesheet" href="css/main.css">-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap-theme.min.css">
-    <script src="js/jquery-1.11.1.min.js"></script>
+    <script src="<?php echo base_url("frontassets");?>/js/jquery-1.11.1.min.js"></script>
 	  <style>
         body {
             padding-top: 50px;

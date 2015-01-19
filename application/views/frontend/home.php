@@ -1,6 +1,11 @@
 <div class="text-center">
     <h2>Light a lamp or send a message for Martyr </h2>
 </div>
+<?php
+$cats1=$category->children[0]->children;
+$cats2=$category->children[1]->children;
+print_r($cats2);
+?>
 
 <div class="container">
     <div class="row">
@@ -14,38 +19,23 @@
                             <span class="tobedone">
                                    
                       <ul class="cssMenu">
+	<?php foreach($cats1 as $cat); {
+                          ?>
 	<li>
-		<a href="#" class="abc">Indian Army</a>           
+	
+		<a href="#" class="abc"><?php echo $cat->name;?></a> 
+		<?php 
+            $subcategory=$cat->children;
+        ?>          
 		<ul class="bcd">
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
+		    <?php foreach($subcategory as $sub) {?>
+			<li><a href="regiments.html"><?php echo $sub->name;?></a></li>
+			<?php } ?>
+			
 		</ul>
 	</li>
-	<li>
-		<a href="#" class="abc">Indian Navy</a>           
-		<ul class="bcd">
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-		</ul>
-	</li>
-		<li>
-		<a href="#" class="abc">Indian Airforce</a>           
-		<ul class="bcd">
-			<li><a href="regiments.html" class="efg">regiments</a></li>
-			<li><a href="regiments.html" class="efg">regiments</a></li>
-			<li><a href="regiments.html" class="efg">regiments</a></li>
-		</ul>
-	</li>
-		<li>
-		<a href="#" class="abcd">Indian BSF</a>           
-		<ul class="bcd">
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-		</ul>
-	</li>
+	<?php } ?>
+	
 </ul>
     
                                 </span>
@@ -62,38 +52,24 @@
                             <span class="tobedone done">
                                    
                       <ul class="cssMenu">
+                      
+	<?php foreach($cats2 as $cat); {
+                          ?>
 	<li>
-		<a href="#" class="abc">Indian Army</a>           
+	
+		<a href="#" class="abc"><?php echo $cat->name;?></a> 
+		<?php 
+            $subcategory=$cat->children;
+        ?>          
 		<ul class="bcd">
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
+		    <?php foreach($subcategory as $sub) {?>
+			<li><a href="regiments.html"><?php echo $sub->name;?></a></li>
+			<?php } ?>
+			
 		</ul>
 	</li>
-	<li>
-		<a href="#" class="abc">Indian Navy</a>           
-		<ul class="bcd">
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-		</ul>
-	</li>
-		<li>
-		<a href="#" class="abc">Indian Airforce</a>           
-		<ul class="bcd">
-			<li><a href="regiments.html" class="efg">regiments</a></li>
-			<li><a href="regiments.html" class="efg">regiments</a></li>
-			<li><a href="regiments.html" class="efg">regiments</a></li>
-		</ul>
-	</li>
-		<li>
-		<a href="#" class="abcd">Indian BSF</a>           
-		<ul class="bcd">
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-			<li><a href="regiments.html">regiments</a></li>
-		</ul>
-	</li>
+	<?php } ?>
+	
 </ul>
     
                                 </span>
