@@ -444,6 +444,7 @@ ul.cssMenu li:hover > ul
     left: -20px;
     top: 15px;
     color: rgb(91, 142, 41);
+    font-family: pt sans;
 }
 .cssMenu li .abcd {
     padding: 0px 8px 0px 5px;
@@ -457,6 +458,7 @@ ul.bcd li a {
     color: #232323;
     padding: 7px 24px 0px 0px;
     float: left;
+    font-family: pt sans;
 }
 ul.bcd li a:hover {
     color: rgb(230, 120, 23);

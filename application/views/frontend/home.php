@@ -19,7 +19,7 @@ print_r($cats2);
                             <span class="tobedone">
                                    
                       <ul class="cssMenu">
-	<?php foreach($cats1 as $cat); {
+	<?php foreach($cats2 as $cat) {
                           ?>
 	<li>
 	
@@ -53,7 +53,7 @@ print_r($cats2);
                                    
                       <ul class="cssMenu">
                       
-	<?php foreach($cats2 as $cat); {
+	<?php foreach($cats1 as $cat) {
                           ?>
 	<li>
 	
