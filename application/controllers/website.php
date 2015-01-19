@@ -27,8 +27,8 @@ class Website extends CI_Controller
     
     public function regiments( )
 	{
-        $id=$this->input->get("id");
-        $data["row"]=$this->martyr_model->getmartyrbyid($id);
+        $categoryid=$this->input->get("category");
+        $data["row"]=$this->regiment_model->getregimentbycategory($categoryid);
 		$data["page"]="details";
         //$data["category"]=$this->category_model->getallcategories();
         $this->load->view("frontend",$data);
