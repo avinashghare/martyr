@@ -1,10 +1,15 @@
+<!--
 <div class="text-center">
     <h2>Light a lamp or send a message for Martyr </h2>
 </div>
+-->
+<div class="head-reg text-center">
+              <h2>LIGHT A LAMP OR SEND A MESSAGE FOR MARTYR</h2>
+              </div>
 <?php
 $cats1=$category->children[0]->children;
 $cats2=$category->children[1]->children;
-print_r($cats2);
+//print_r($cats2);
 ?>
 
 <div class="container">
@@ -29,7 +34,7 @@ print_r($cats2);
         ?>          
 		<ul class="bcd">
 		    <?php foreach($subcategory as $sub) {?>
-			<li><a href="regiments.html"><?php echo $sub->name;?></a></li>
+			<li><a href="<?php echo site_url('website/regiments?category=').$sub->id;?>"><?php echo $sub->name;?></a></li>
 			<?php } ?>
 			
 		</ul>

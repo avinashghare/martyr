@@ -8,7 +8,7 @@
               <h2>LIGHT A LAMP</h2>
               </div>
                        <div class="pull-left navi">
-                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Soldier Detail</a>|<a href="lamp.html">Light A Lamp</a>
+                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->regiment;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Soldier Detail</a>|<a href="#">Light A Lamp</a>
               </div>
           </div>
           <div class="col-md-3"></div>

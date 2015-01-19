@@ -1,4 +1,6 @@
-
+<?php
+print_r($row);
+?>
         <div class="container">
             <div class="row">
                 <div class="col-md-3"></div>
@@ -8,7 +10,7 @@
                         <h2>SEND A MESSAGE TO FAMILY</h2>
                     </div>
                       <div class="pull-left navi">
-                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Soldier Detail</a>|<a href="message.html">Send a Message</a>
+                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->regiment;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Soldier Detail</a>|<a href="">Send a Message</a>
               </div>
                 </div>
                 <div class="col-md-3"></div>

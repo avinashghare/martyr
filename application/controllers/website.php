@@ -7,7 +7,7 @@ class Website extends CI_Controller
 	{
 		$data["page"]="home";
         $data["category"]=$this->category_model->getcategorytree(0);
-        print_r($data["category"]);
+//        print_r($data["category"]);
         $this->load->view("frontend",$data);
 	}
     public function martry( )
@@ -48,6 +48,7 @@ class Website extends CI_Controller
 	{
         $id=$this->input->get("id");
         $data['id']=$this->input->get('id');
+        $data["row"]=$this->martyr_model->getmartyrbyid($id);
 		$data["page"]="sendmessage";
 //        $data["row"]=$this->martyr_model->sendamessage($id);
 //        $this->regiment_model->addlight($id);
@@ -61,10 +62,12 @@ class Website extends CI_Controller
         $city=$this->input->post("city");
         $email=$this->input->post("email");
         $message=$this->input->post("message");
+        if($id!="")
+        {
         $this->message_model->addmessage($id,$name,$contact,$city,$email,$message);
+        }
 		$data["page"]="home";
-//        $data["row"]=$this->martyr_model->sendamessage($id);
-//        $this->regiment_model->addlight($id);
+        $data["category"]=$this->category_model->getcategorytree(0);
         $this->load->view("frontend",$data);
 	}
     

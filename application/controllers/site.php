@@ -861,7 +861,7 @@ class Site extends CI_Controller
         $this->checkaccess($access);
         $data["page"]="editregiment";
         $data["title"]="Edit regiment";
-        $data["subcategory"]=$this->subcategory_model->getsubcategorydropdown();
+            $data["subcategory"]=$this->navigation_model->getsubcategorydropdown();
         $data["before"]=$this->regiment_model->beforeedit($this->input->get("id"));
         $this->load->view("template",$data);
     }
@@ -878,7 +878,7 @@ class Site extends CI_Controller
             $data["alerterror"]=validation_errors();
             $data["page"]="editregiment";
             $data["title"]="Edit regiment";
-            $data["subcategory"]=$this->subcategory_model->getsubcategorydropdown();
+            $data["subcategory"]=$this->navigation_model->getsubcategorydropdown();
             $data["before"]=$this->regiment_model->beforeedit($this->input->get("id"));
             $this->load->view("template",$data);
         }
