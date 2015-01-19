@@ -1,6 +1,4 @@
-<?php
-print_r($row);
-?>
+
   <div class="container">
       <div class="row">
          <div class="col-md-3"></div>
@@ -17,14 +15,15 @@ print_r($row);
   <div class="container">
       <div class="row">
           <div class="col-md-12">
-                  <div class="pull-left ">
+                  <div class="links ">
                   <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Martyr Detail</a>
               </div>
           </div>
       </div>
   </div>
+  <div class="regiment-backs">
    <div class="container">
-      <div class="regiment-backs">
+      
        <div class="row">
            <div class="col-md-3">
                <div class="detail-img">
@@ -47,8 +46,8 @@ print_r($row);
                    <p><?php echo $row->description;?></p>
                </div>
                <div class="detail-btn text-center">
-           <a href="<?php echo site_url('website/sendmessage?id=').$row->id;?>"><button type="button" class="btn">Send Message</button></a> 
-                   <a href="<?php echo site_url('website/lightalamp?id=').$row->id;?>"> <button type="button" class="btn">Light a Lamp</button></a>
+           <a href="<?php echo site_url('website/sendmessage?id=').$row->id;?>"><button type="button" class="btns">Send Message</button></a> 
+                   <a href="<?php echo site_url('website/lightalamp?id=').$row->id;?>"> <button type="button" class="btns">Light a Lamp</button></a>
 
                </div>
            </div>
