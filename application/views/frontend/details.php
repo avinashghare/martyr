@@ -1,5 +1,5 @@
 <?php
-print_r($row);
+//print_r($row);
 ?>
   <div class="container">
       <div class="row">
@@ -18,7 +18,7 @@ print_r($row);
       <div class="row">
           <div class="col-md-12">
                   <div class="pull-left ">
-                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Martyr Detail</a>
+                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?id=').$row->regiment;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Martyr Detail</a>
               </div>
           </div>
       </div>

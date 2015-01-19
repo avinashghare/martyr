@@ -8,7 +8,8 @@
               <h2>ARMY MARTYR REGIMENTS</h2>
               </div>
               <div class="pull-left navi">
-                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>
+                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="#">Regiments</a>
+<!--                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$table[0]->id;?>">Regiments</a>-->
               </div>
           </div>
           <div class="col-md-3"></div>
@@ -25,7 +26,7 @@
 			<div class="col-md-3">
 				<ul id="da-thumbs" class="da-thumbs">
 					<li>
-						<a href="detail.html">
+						<a href="<?php echo site_url('website/detail?id=').$row->id;?>">
 							<img src="<?php echo base_url("uploads");?><?php echo "/".$row->image;?>">
 							<div class="fonts"><span><?php echo $row->name;?></span><p><?php echo $row->dateofdeath;?></p></div>
 						</a>
