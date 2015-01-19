@@ -4,45 +4,36 @@
          <div class="col-md-3"></div>
          
           <div class="col-md-6">
-             <div class="head-reg text-center">
-              <h2>ARMY MARTYR REGIMENTS</h2>
+             <div class="head-reg text-center" style="margin-top: -80px;">
+              <h2>LIGHT A LAMP</h2>
               </div>
-              <div class="pull-left navi">
-                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>
+                       <div class="pull-left navi">
+                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Soldier Detail</a>|<a href="lamp.html">Light A Lamp</a>
               </div>
           </div>
           <div class="col-md-3"></div>
       </div>
   </div>
-   <div class="container">
-      <div class="regiment-back">
-       <div class="row">
-           
-		<?php
-        foreach($table as $row)
-        {
-            ?>
-			<div class="col-md-3">
-				<ul id="da-thumbs" class="da-thumbs">
-					<li>
-						<a href="detail.html">
-							<img src="<?php echo base_url("uploads");?><?php echo "/".$row->image;?>">
-							<div class="fonts"><span><?php echo $row->name;?></span><p><?php echo $row->dateofdeath;?></p></div>
-						</a>
-					</li>
-					</ul>
-					</div>
-					<?php
-                            }
-                    ?>
-						
-           </div>
+   <div class="container pages">
+      <div class="">
+  <div class="lamp-head text-center">
+      <img src="<?php echo base_url("uploads");?><?php echo "/".$row->image;?>" class="lamp-img" height="250px" width="200px">
+      <h3><?php echo $row->name;?></h3>
+      <h4><?php echo $row->dateofdeath;?></h4>
+      <div class="lamp-light">
+<!--          <div class="candle"></div>-->
+          <img class="lam" src="<?php echo base_url('frontassets/image/0008.gif'); ?>">
+     <img class="lam"  src="<?php echo base_url('frontassets/image/0008.gif'); ?>">
+      </div>
+      
+  </div>
            
        </div>
        
    </div>
     </div>
     <div class="footer"></div>
+    </div>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
     <script>

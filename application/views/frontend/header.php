@@ -11,6 +11,15 @@
 
     <link href="<?php echo base_url('frontassets/css/main.css'); ?>" rel="stylesheet">
    
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('frontassets/css/demo.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('frontassets/css/style.css'); ?>" />
+    <link rel="stylesheet" type="text/css" href="<?php echo base_url('frontassets/css/form.css'); ?>" />
+
+    <noscript>
+        <link rel="stylesheet" type="text/css" href="<?php echo base_url('frontassets/css/noJS.css'); ?>" />
+    </noscript>
+    <script src="<?php echo base_url('frontassets/js/modernizr.custom.97074.js'); ?>"></script>
+
     <link rel="shortcut icon" href="">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
 <!--    <link rel="stylesheet" href="css/main.css">-->

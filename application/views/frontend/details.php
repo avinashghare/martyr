@@ -47,8 +47,8 @@ print_r($row);
                    <p><?php echo $row->description;?></p>
                </div>
                <div class="detail-btn text-center">
-           <a href="message.html"><button type="button" class="btn">Send Message</button></a> 
-                   <a href="lamp.html"> <button type="button" class="btn">Light a Lamp</button></a>
+           <a href="<?php echo site_url('website/sendmessage?id=').$row->id;?>"><button type="button" class="btn">Send Message</button></a> 
+                   <a href="<?php echo site_url('website/lightalamp?id=').$row->id;?>"> <button type="button" class="btn">Light a Lamp</button></a>
 
                </div>
            </div>

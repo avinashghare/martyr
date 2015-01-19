@@ -32,6 +32,7 @@ class regiment_model extends CI_Model
         $query=$this->db->update( "martyr_regiment", $data );
         return 1;
     }
+    
     public function delete($id)
     {
         $query=$this->db->query("DELETE FROM `martyr_regiment` WHERE `id`='$id'");
@@ -51,5 +52,23 @@ class regiment_model extends CI_Model
 		
 		return $return;
 	}
+    
+	public function getregimentbycategory($id)
+	{
+		$query=$this->db->query("SELECT `martyr_martyr`.`id`, `martyr_martyr`.`regiment`, `martyr_martyr`.`name`, `martyr_martyr`.`rank`, `martyr_martyr`.`unit`, `martyr_martyr`.`homestate`, `martyr_martyr`.`operation`, `martyr_martyr`.`dateofdeath`, `martyr_martyr`.`image`, `martyr_martyr`.`age`, `martyr_martyr`.`description`, `martyr_martyr`.`status`, `martyr_martyr`.`lights`, `martyr_martyr`.`email` ,`martyr_regiment`.`name` AS `regimentname`,`navigation`.`name` AS `navigationname`
+        FROM `martyr_martyr` 
+        LEFT OUTER JOIN `martyr_regiment` ON `martyr_martyr`.`regiment`= `martyr_regiment`.`id`
+        LEFT OUTER JOIN `navigation` ON `martyr_regiment`.`subcategory`= `navigation`.`id`
+        WHERE `martyr_regiment`.`subcategory`='$id'")->result();
+		return $query;
+	}
+    public function addlight($id)
+    {
+        $query=$this->db->query("SELECT `lights` FROM `martyr_martyr` WHERE `id`='$id'")->row();
+        $previouslikes=$query->lights;
+        $likes=intval($previouslikes)+1;
+        $queryaddlamp=$this->db->query("UPDATE `martyr_martyr` SET `lights`='$likes'");
+        return 1;
+    }
 }
 ?>
