@@ -9,11 +9,18 @@ print_r($row);
              <div class="head-reg text-center">
               <h2>ARMY MARTYR DETAILS</h2>
               </div>
-                <div class="pull-left navi">
+            
+          </div>
+          <div class="col-md-3"></div>
+      </div>
+  </div>
+  <div class="container">
+      <div class="row">
+          <div class="col-md-12">
+                  <div class="pull-left ">
                   <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Martyr Detail</a>
               </div>
           </div>
-          <div class="col-md-3"></div>
       </div>
   </div>
    <div class="container">
