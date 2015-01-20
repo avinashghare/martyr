@@ -1,31 +1,32 @@
  #wrapper {
         width:450px;
-        margin: 15px auto;
+        margin: 45px auto;
         font-family:Verdana, sans-serif;
     
         border: 1px solid #768D91;
         height: auto;
         width: 557px;
-        /* padding: 72px; */
-        margin-bottom: 20px;
+         padding: 72px; 
+        margin-bottom: 30px;
 }
-    legend {
+    legends {
         color: #768D91;
         font-size:16px;
         padding:0 10px;
         background:#fff;
         -moz-border-radius:4px;
         /* box-shadow: 0 0px 10px rgba(118, 141, 145, 1); */
-        padding:5px 10px;
+        padding: 5px 55px;
         text-transform:uppercase;
         /* font-family:Helvetica, sans-serif; */
         /* font-weight:bold; */
     
         text-align: center;
         position: relative;
-        top: -16px;
+        top: -82px;
         border: 1px solid;
         width: 50%;
+        left: 64px;
 }
     fieldset {
         border-radius:4px;

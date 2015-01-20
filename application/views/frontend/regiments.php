@@ -32,8 +32,9 @@
           </div>
       </div>
   </div>
+    <div class="regiment-back">
    <div class="container">
-      <div class="regiment-back">
+    
        <div class="row">
            
 		<?php

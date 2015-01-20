@@ -9,16 +9,19 @@
 .da-thumbs li {
 	/* float: left; */
 	margin: 5px;
-	background: #fff;
-	padding: 8px;
+	/* background: #fff; */
+	padding: 5px;
 	position: relative;
-	box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+	/* box-shadow: 0 1px 3px rgba(0,0,0,0.1); */
 	text-align: center;
+	border: 1px solid rgb(0, 87, 156);
 }
 .da-thumbs li a,
 .da-thumbs li a img {
 	display: block;
 	position: relative;
+	width: 200px;
+	height: auto;
 }
 .da-thumbs li a {
 	overflow: hidden;
@@ -40,7 +43,7 @@
 	text-shadow: 1px 1px 1px rgba(0,0,0,0.2);
 	border-bottom: 5px solid rgba(91, 142, 40, 1);
 	box-shadow: 0 1px 0 rgba(247, 98, 33, 0.1), 0 -10px 0 rgba(230, 120, 23, 1);
-	font-family: chunkfive;
+	font-family: neuton;
 	font-size: 14px;
 	text-align: center;
 	letter-spacing: 2px;

@@ -219,12 +219,14 @@ top: 15px;
     margin: 30px 0 0;
 }
 .regiment-back{
-background: url(../image/backs.png) no-repeat  center center;
+/* background: url(../image/backs.png) no-repeat  center center; */
     background-size: cover;
     
 height: 685px;
 /* opacity: 0.4; */
 margin-bottom: 20px;
+border-top: 2px solid rgb(230, 120, 23);
+border-bottom: 2px solid rgb(91, 142, 41);
 }
 .regiment-backs{
 /* background: url(../image/detail.jpg) no-repeat  center center; */
@@ -267,10 +269,10 @@ img.img-back:hover {
     box-shadow: 0 0 0 8px #E66217;
 }
 .fonts p {
-    font-size: 14px;
+    font-size: 16px;
     color: #fff;
     text-align: center;
-    font-family: chunkfive;
+    font-family: neuton;
     letter-spacing: 1px;
 }
 .detail-img img {
@@ -361,8 +363,11 @@ font-family: 'Raleway', sans-serif;
 
 
 .lamp-head img.lamp-img {
-    border: 8px solid rgba(223, 54, 14, 0.6);
-    margin: 12px auto;
+    /* border: 8px solid rgba(223, 54, 14, 0.6); */
+    padding: 5px;
+    width: 200px;
+    height: auto;
+    border: 1px solid rgb(0, 87, 156);
 }
 .lamp-head h1 {
     font-family: chunkfive;
@@ -476,7 +481,7 @@ font-family: 'Raleway', sans-serif;
     width: 80px;
     height: 80px;
 	margin: -280px 40px 54px  -34px;
-	background:url("../image/flower13.png");
+	background:url("../image/flo.png");
     
     -webkit-animation: fallingLeaves 10s infinite  linear;
     -moz-animation: fallingLeaves 10s infinite  linear;
@@ -562,7 +567,7 @@ cursor: pointer;
     background: #1d2d29;
     height: 50px;
    width: 100%;
-    position: absolute;
+    position: relative;
    
     z-index: -1;
 }
@@ -575,12 +580,13 @@ margin-top: -80px;
 }
 */
 .lamp-head.text-center h3 {
-    font-family: chunkfive;
+    font-family: pt sans;
     margin: 14px auto;
+    text-transform: capitalize;
 }
 
 .lamp-head.text-center h4 {
-    font-family: chunkfive;
+    font-family: pt sans;
 }
 
 .form-wrapper {
@@ -697,4 +703,12 @@ font-weight: bold;
     position: absolute;
     color: #fff;
     left: 46px;
+}
+
+.regi {
+    border-top: 2px solid rgb(230, 120, 23);
+    border-bottom: 2px solid rgb(91, 142, 41);
+}
+.lamp-head.text-center {
+    margin: 20px auto;
 }
