@@ -40,6 +40,7 @@
 
 $route['default_controller'] = "website";
 $route['404_override'] = '';
+$route['backend'] = "site/login";
 
 
 /* End of file routes.php */

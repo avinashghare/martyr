@@ -71,9 +71,9 @@ $myserver=$_SERVER['SERVER_NAME'];
 if($myserver=="www.mafiawarloots.com" || $myserver=="mafiawarloots.com" || $myserver=="www.wohlig.biz" || $myserver=="wohlig.biz")
 {
 $db['default']['hostname'] = 'localhost';
-$db['default']['username'] = 'mafiawar_sarejahanse';
+$db['default']['username'] = 'mafiawar_sare';
 $db['default']['password'] = 'chintan123';
-$db['default']['database'] = 'mafiawar_sjsa';
+$db['default']['database'] = 'mafiawar_sare';
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;
