@@ -49,12 +49,12 @@
             <div class="row">
                 <div class="head-top">
                     <div class="col-md-1"></div>
-                   <a href="index.html"> <div class="col-md-3">
+                   <a href="<?php echo site_url('website/index');?>"> <div class="col-md-3">
                         <img src="<?php echo base_url('assets/images/logo.png'); ?>">
                     </div></a>
                     <div class="col-md-4 text-center">
-                        <form class="form-wrapper">
-    <input type="text" id="search" placeholder="Search a Martyr ..." required>
+                        <form class="form-wrapper" action="<?php echo site_url('website/search');?>" method="POST">
+    <input name="name" type="text" id="search" placeholder="Search a Martyr ..." required>
     <input type="submit" value="go" id="submit">
 </form>
                     </div>

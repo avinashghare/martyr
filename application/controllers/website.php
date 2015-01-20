@@ -71,6 +71,22 @@ class Website extends CI_Controller
         $this->load->view("frontend",$data);
 	}
     
-        
+        public function search()
+        {
+            $name=$this->input->get_post('name');
+            $data['row']=$this->martyr_model->searchbyname($name);
+            if(!empty($data['row']))
+            {  
+                $data["page"]="details";
+                $this->load->view("frontend",$data);
+            }
+            else
+            {
+                $data["page"]="nodatafound";
+                $this->load->view("frontend",$data);
+            }
+//            $data["page"]="details";
+//            $this->load->view("frontend",$data);
+        }
 }
 ?>

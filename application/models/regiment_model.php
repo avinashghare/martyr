@@ -67,7 +67,7 @@ class regiment_model extends CI_Model
         $query=$this->db->query("SELECT `lights` FROM `martyr_martyr` WHERE `id`='$id'")->row();
         $previouslikes=$query->lights;
         $likes=intval($previouslikes)+1;
-        $queryaddlamp=$this->db->query("UPDATE `martyr_martyr` SET `lights`='$likes'");
+        $queryaddlamp=$this->db->query("UPDATE `martyr_martyr` SET `lights`='$likes' WHERE `id`='$id'");
         return 1;
     }
 }

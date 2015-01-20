@@ -63,9 +63,10 @@ class martyr_model extends CI_Model
 	}
 	public function getmartyrbyid($id)
 	{
-		$query=$this->db->query("SELECT `martyr_martyr`.`id`, `martyr_martyr`.`regiment`, `martyr_martyr`.`name`, `martyr_martyr`.`rank`, `martyr_martyr`.`unit`, `martyr_martyr`.`homestate`, `martyr_martyr`.`operation`, `martyr_martyr`.`dateofdeath`, `martyr_martyr`.`image`, `martyr_martyr`.`age`, `martyr_martyr`.`description`, `martyr_martyr`.`status`, `martyr_martyr`.`lights`, `martyr_martyr`.`email` ,`martyr_regiment`.`name` AS `regimentname`
+		$query=$this->db->query("SELECT `martyr_martyr`.`id`, `martyr_martyr`.`regiment`, `martyr_martyr`.`name`, `martyr_martyr`.`rank`, `martyr_martyr`.`unit`, `martyr_martyr`.`homestate`, `martyr_martyr`.`operation`, `martyr_martyr`.`dateofdeath`, `martyr_martyr`.`image`, `martyr_martyr`.`age`, `martyr_martyr`.`description`, `martyr_martyr`.`status`, `martyr_martyr`.`lights`, `martyr_martyr`.`email` ,`martyr_regiment`.`name` AS `regimentname`,`martyr_regiment`.`subcategory` AS `categoryid`
         FROM `martyr_martyr` 
         LEFT OUTER JOIN `martyr_regiment` ON `martyr_martyr`.`regiment`= `martyr_regiment`.`id`
+        LEFT OUTER JOIN `navigation` ON `martyr_regiment`.`subcategory`= `navigation`.`id`
         WHERE `martyr_martyr`.`id`='$id'")->row();
 		return $query;
 	}
@@ -81,6 +82,15 @@ class martyr_model extends CI_Model
 		}
 		
 		return $return;
+	}
+    
+	public function searchbyname($name)
+	{
+		$query=$this->db->query("SELECT `martyr_martyr`.`id`, `martyr_martyr`.`regiment`, `martyr_martyr`.`name`, `martyr_martyr`.`rank`, `martyr_martyr`.`unit`, `martyr_martyr`.`homestate`, `martyr_martyr`.`operation`, `martyr_martyr`.`dateofdeath`, `martyr_martyr`.`image`, `martyr_martyr`.`age`, `martyr_martyr`.`description`, `martyr_martyr`.`status`, `martyr_martyr`.`lights`, `martyr_martyr`.`email` ,`martyr_regiment`.`name` AS `regimentname`
+        FROM `martyr_martyr` 
+        LEFT OUTER JOIN `martyr_regiment` ON `martyr_martyr`.`regiment`= `martyr_regiment`.`id`
+        WHERE `martyr_martyr`.`name` LIKE '$name%'")->row();
+		return $query;
 	}
 }
 ?>
