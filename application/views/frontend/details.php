@@ -5,7 +5,7 @@
          
           <div class="col-md-6">
              <div class="head-reg text-center">
-              <h2>ARMY MARTYR DETAILS</h2>
+              <h2><?php echo strtoupper ($row->regimentname);?> MARTYR DETAILS</h2>
               </div>
             
           </div>
@@ -19,7 +19,7 @@
 <!--                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Martyr Detail</a>-->
 
                
-                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?id=').$row->regiment;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Martyr Detail</a>
+                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->categoryid;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Martyr Detail</a>
 
               </div>
           </div>

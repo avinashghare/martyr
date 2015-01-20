@@ -21,7 +21,7 @@
         <div class="col-md-12">
 
             <div class="links ">
-                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->regiment;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Soldier Detail</a>|<a href="">Send a Message</a>
+                <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->categoryid;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Soldier Detail</a>|<a href="">Send a Message</a>
 
 
                 <!--                  <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?id=').$row->regiment;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Martyr Detail</a>-->
@@ -39,7 +39,7 @@
                 <fieldset>
                     <legends>Send a Message</legends>
                     <div style="display:none;">
-                        <input type="text" name="id" placeholder="Martyr id" value="<?php echo $id;?>" />
+                        <input type="text" name="id" placeholder="Martyr id" value="<?php echo $id;?>" class="classajax" />
                     </div>
                     <div>
                         <input type="text" name="name" placeholder="Your Name" required/>
@@ -69,4 +69,57 @@ top: 25px;" />
 
 </div>
 </div>
+<!--
+<script>
+ $(document).ready(function () {
+//     alert($id);
+     var id=$('.classajax').val();
+     alert (id);
+     alert("demo");
+     
+    function onloadpage() {
+        $.getJSON(
+            "<?php echo base_url(); ?>index.php/website/lightalampcount/" + $('#select2').val(), {
+                id: "123"
+            },
+            function (data) {
+                //  alert(data);
+                console.log(data);
+//                nodata=data;
+//                // $("#store").html(data);
+//                changestoretable(data);
 
+            }
+
+        );
+
+    }
+//        $.getJSON(
+//            "<?php echo base_url(); ?>index.php/website/lightalampcount/" + $('.classajax').val(), {
+//                id: "123"
+//            },
+    })
+//var nodata=9;
+//    function changestore() {
+//        //alert($('#select3').val());
+//
+//        $.getJSON(
+//            "<?php echo base_url(); ?>index.php/site/getstore/" + $('#select2').val(), {
+//                id: "123"
+//            },
+//            function (data) {
+//                //  alert(data);
+//                console.log(data);
+//                nodata=data;
+//                // $("#store").html(data);
+//                changestoretable(data);
+//
+//            }
+//
+//        );
+//
+//    }
+
+
+</script>
+-->

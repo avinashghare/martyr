@@ -40,8 +40,14 @@ class Website extends CI_Controller
         $data['id']=$this->input->get('id');
 		$data["page"]="light";
         $data["row"]=$this->martyr_model->getmartyrbyid($id);
-        $this->regiment_model->addlight($id);
+//        $this->regiment_model->addlight($id);
         $this->load->view("frontend",$data);
+	}
+    
+    public function lightalampcount($id)
+	{
+        $this->regiment_model->addlight($id);
+        return 1;
 	}
     
     public function sendmessage()

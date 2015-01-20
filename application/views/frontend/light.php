@@ -56,11 +56,14 @@
 <!--                  <a href="index.html">Home</a>|<a href="regiments.html">Regiments</a>|<a href="detail.html">Martyr Detail</a>-->
 
                
-                 <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->regiment;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Soldier Detail</a>|<a href="#">Light A Lamp</a>
+                 <a href="<?php echo site_url('website/index');?>">Home</a>|<a href="<?php echo site_url('website/regiments?category=').$row->categoryid;?>">Regiments</a>|<a href="<?php echo site_url('website/detail?id=').$row->id;?>">Soldier Detail</a>|<a href="#">Light A Lamp</a>
 
               </div>
           </div>
       </div>
+      <div style="display:none;">
+                        <input type="text" name="id" placeholder="Martyr id" value="<?php echo $id;?>" class="classajax" />
+                    </div>
   </div>
   <div class="regi">
    <div class="container pages">
@@ -81,26 +84,27 @@
    </div>
    </div>
     </div>
-<!--
-    <div class="footer"></div>
-    </div>
-    <script src="js/jquery-1.11.1.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
+
     <script>
-        $(document).ready(function () {
+ $(document).ready(function () {
+//     alert($id);
+     var id=$('.classajax').val();
+//     alert (id);
+//     alert("demo");
+     
+        $.getJSON(
+            "<?php echo base_url(); ?>index.php/website/lightalampcount/" + $('.classajax').val(), {
+            },
+            function (data) {
+                //  alert(data);
+                console.log(data);
+//                nodata=data;
+//                // $("#store").html(data);
+//                changestoretable(data);
 
-            $(".section1 .show").click(function () {
-//                console.log("ABCD");
-                $(".section1 span.tobedone").fadeOut(300);
-                $(this).parents(".section1").children("span.tobedone ").fadeIn(300);
-            });
-        });
-    </script>
-    <script type="text/javascript" src="js/jquery.hoverdir.js"></script>	
-		<script type="text/javascript">
-			$(function() {
-			
-				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
+            }
 
-			});
-		</script>-->
+        );
+
+    });
+		</script>

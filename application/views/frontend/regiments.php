@@ -5,7 +5,7 @@
          
           <div class="col-md-6">
              <div class="head-reg text-center">
-              <h2>ARMY MARTYR REGIMENTS</h2>
+              <h2><?php echo strtoupper ($table[0]->regimentname);?> MARTYR REGIMENTS</h2>
               </div>
 <!--
               <div class="pull-left navi">
