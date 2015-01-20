@@ -33,7 +33,7 @@
         background: #fff; 
         background: -moz-linear-gradient(#fff, #f9fdff);
         background: -o-linear-gradient(#fff, #f9fdff);
-        background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff)); /
+        /* background: -webkit-gradient(linear, 0% 0%, 0% 100%, from(#fff), to(#f9fdff)); */ /
         background: -webkit-linear-gradient(#fff, #f9fdff);
         padding:20px;
         border-color:rgba(4, 129, 177, 0.4);
@@ -55,7 +55,7 @@
     #wrapper input[type="text"], input[type="password"]{
         padding: 8px 6px;
         height: 40px;
-        width:280px;
+        width:100%;
     }
     input[type="text"]:focus,
     input[type="password"]:focus {
@@ -120,4 +120,7 @@
 #wrapper input.btn {
     position: relative;
     top: 0px;
+}
+#wrapper textarea{
+width: 100%;
 }

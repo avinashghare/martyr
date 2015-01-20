@@ -54,7 +54,7 @@
                         <input type="text" name="email" placeholder="Email" required/>
                     </div>
                     <div>
-                        <div class="small">this textarea is just for test so you can see the placeholder working on textarea as well</div>
+                        
                         <textarea name="message" placeholder="Message"></textarea>
                     </div>
                     <!--                <button type="submit" class="btn btn-info">Submit</button>-->
