@@ -34,7 +34,19 @@ $cats2=$category->children[1]->children;
         ?>          
 		<ul class="bcd">
 		    <?php foreach($subcategory as $sub) {?>
-			<li><a href="<?php echo site_url('website/regiments?category=').$sub->id;?>"><?php echo $sub->name;?></a></li>
+			<li><a href="<?php echo site_url('website/regiments?category=').$sub->id;?>"><?php echo $sub->name;?></a>
+				
+            <ul class="megamenu">
+            <?php 
+            $subcategory1=$subcategory->children;
+        ?>  
+            <?php foreach($subcategory1 as $sub1) { ?>
+			    <li><?php echo $sub1->name;?></li>
+			 <?php } ?>
+			</ul>
+			
+			
+			</li>
 			<?php } ?>
 			
 		</ul>
@@ -68,7 +80,18 @@ $cats2=$category->children[1]->children;
         ?>          
 		<ul class="bcd">
 		    <?php foreach($subcategory as $sub) {?>
-			<li><a href="regiments.html"><?php echo $sub->name;?></a></li>
+			<li ><a href="regiments.html"><?php echo $sub->name;?></a>
+		
+		            <ul class="megamenu">
+            <?php 
+            $subcategory1=$subcategory->children;
+        ?>  
+            <?php foreach($subcategory1 as $sub1) { ?>
+			    <li><a href="regiments.php"><?php echo $sub1->name;?></a></li>
+			 <?php } ?>
+			</ul>
+			
+			</li>
 			<?php } ?>
 			
 		</ul>
@@ -76,6 +99,7 @@ $cats2=$category->children[1]->children;
 	<?php } ?>
 	
 </ul>
+
     
                                 </span>
 
