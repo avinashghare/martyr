@@ -63,6 +63,7 @@
        
    </div>
     </div>
+<!--
     <div class="footer"></div>
     <script src="js/jquery-1.11.1.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
@@ -83,4 +84,4 @@
 				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
 
 			});
-		</script>
+		</script>-->

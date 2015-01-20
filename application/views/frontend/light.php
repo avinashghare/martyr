@@ -1,5 +1,7 @@
-
-		<div class="fallingLeaves" style="margin:0px auto;">
+<div class="container">
+    <div class="row">
+    <div class="col-md-12">
+		<div class="fallingLeaves" >
 		<span></span>
 		<span></span>
 		<span></span>
@@ -28,9 +30,11 @@
 		<span></span>
 		<span></span>
 		<span></span>
-	
 	
 	</div>
+	</div>
+	</div>
+  </div>
 
   <div class="container">
       <div class="row">
@@ -67,7 +71,7 @@
       <h4><?php echo $row->dateofdeath;?></h4>
       <div class="lamp-light">
 <!--          <div class="candle"></div>-->
-          
+        <img src="<?php echo base_url('assets/images/lamp.gif'); ?>">
       </div>
       
   </div>
@@ -77,6 +81,7 @@
    </div>
    </div>
     </div>
+<!--
     <div class="footer"></div>
     </div>
     <script src="js/jquery-1.11.1.min.js"></script>
@@ -98,4 +103,4 @@
 				$(' #da-thumbs > li ').each( function() { $(this).hoverdir(); } );
 
 			});
-		</script>
+		</script>-->
