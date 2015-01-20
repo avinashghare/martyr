@@ -149,7 +149,7 @@ ul.cssMenu ul {
     width: 101px;
     color: white;
     border-top: 2px solid #E67817;
-    margin: 3px 8px 0px 0px;
+    margin: 3px 8px 32px 0px;
     padding: 6px 0;
     border-left: 1px solid #E8E8E8;
     border-right: 1px solid #E8E8E8;
@@ -163,7 +163,7 @@ ul.cssMenu ul {
     color: #fff;
     padding: 5px 0;
     border: 1px solid #E8E8E8;
-    margin-top: 10px;
+    margin-top: 7px;
 }
 ul.cssMenu li:hover > ul {
     display: block;
@@ -263,7 +263,7 @@ img.img-back:hover {
 .detail-text {
     font-family: chunkfive;
     /* background: #fff; */
-    margin: 40px 20px;
+    margin: 40px 0px;
 }
 .detail-text h4 {
     font-size: 24px;
@@ -294,13 +294,13 @@ img.img-back:hover {
 }
 .detail-hist h2 {
     font-family: pt sans;
-    padding-left: 20px;
+    padding-left: 20px 0;
     font-size: 17px;
     color: #A0A0A0;
 }
 .detail-hist p {
     /* background: rgba(255, 255, 255, 0.72); */
-    padding: 0px 10px 20px 20px;
+    padding: 0px 10px 20px 0px;
     text-transform: capitalize;
     /* font-family: pt sans; */
     font-family: pt sans;
